@@ -5,6 +5,32 @@
 <meta http-equiv="keywords" content="${channel.keywords!}"/>
 <meta http-equiv="description" content="${channel.description!}"/>
 <title>${channel.title!channel.name} - ${site.name} - Powered by JEECMS</title>
+<style type="text/css">
+		div.tssjItem{
+            display: block;
+        }
+        div.tssjItem:hover:before{
+            -webkit-transition: left 2.5s;
+            -moz-transition: left 2.5s;
+            transition: left 2.5s;
+            left: 920px;
+        }
+        div.tssjItem:before{
+            content: "";
+            position: absolute;
+            width: 80px;
+            height: 475px;
+            top: 0;
+            left: -150px;
+            overflow: hidden;
+            background: -moz-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);
+            background: -webkit-gradient(linear,left top,right top,color-stop(0%,rgba(255,255,255,0)),color-stop(50%,rgba(255,255,255,.2)),color-stop(100%,rgba(255,255,255,0)));
+            background: -webkit-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);
+            background: -o-linear-gradient(left,rgba(255,255,255,0)0,rgba(255,255,255,.2)50%,rgba(255,255,255,0)100%);
+            -webkit-transform: skewX(-25deg);
+            -moz-transform: skewX(-25deg);
+        }
+</style>
 <script src="${resSys}/jquery.js" type="text/javascript"></script>
 <script src="${resSys}/front.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -118,7 +144,7 @@ $(function() {
 		},100)
 	}
 	//触发
-	$('.tssjItem').hover(
+	/* $('.tssjItem').hover(
 		function () {
 		  var obj = $(this);
 			biankuang(obj);
@@ -127,7 +153,7 @@ $(function() {
 		  var obj = $(this);
 			biankuang1(obj);
 		}
-	);
+	); */
 	</script>
     </div>
     [#include "../include/page.html"/]
